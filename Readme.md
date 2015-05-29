@@ -11,19 +11,21 @@ Configure your Twilio number's messaging url to the public url of your reply.php
 
 
 ```git clone https://github.com/plabbett/email2sms```
+
 ```cd email2sms```
+
 ```composer install```
 
 Rename config.example.php to config.php
 Modify as you see fit.
 
 
-# Configure Sendmail Alias and Domain Catch All ==
+# Configure Sendmail Alias and Domain Catch All 
 
 ## Create alias to our script
 In sendmail, add an alias to pipe email to the PHP script.
 
-nano /etc/aliases
+```nano /etc/aliases```
 	
 Add: youralias: “|/usr/bin/php –q /opt/email2sms/parse.php”
 
@@ -39,7 +41,7 @@ Add: @yourdomain.com youralias
 
 This next configuration tells the sendmail server it can listen for messages for yourdomain.com
 
-nano /etc/mail/local-host-names
+```nano /etc/mail/local-host-names```
 
 Add: yourdomain.com
 
@@ -47,7 +49,7 @@ Add: yourdomain.com
 
 You can check /var/log/maillog for routing problems on messages. 
 
-Run the command “newaliases”
+Run the command ```newaliases```
 
 Restart sendmail
 
@@ -56,22 +58,22 @@ Restart sendmail
 
 Navigate to parse.php and set 755 permissions:
 
-i.e., chmod 755 /opt/email2sms/parse.php
+i.e., ```chmod 755 /opt/email2sms/parse.php```
 
-[root@support smrsh]# cd /opt/email2sms
+[root@vm smrsh]# ```cd /opt/email2sms```
 
-[root@support email2sms]# chmod 755 parse.php
+[root@vm email2sms]# ```chmod 755 parse.php```
 
 Now we have to tell sendmail to allow smrsh to use php
 
-[root@support email2sms]# cd /etc/smrsh 
+[root@vm email2sms]# ```cd /etc/smrsh``` 
 
-[root@support smrsh]# ln -s /usr/bin/php ./php
+[root@vm smrsh]# ```ln -s /usr/bin/php ./php```
 
-[root@support smrsh]# ln -s /opt/email2sms/parse.php ./parse.php
+[root@vm smrsh]# ```ln -s /opt/email2sms/parse.php ./parse.php```
 
 
-You may need to perform a newaliases again and then service sendmail restart
+You may need to perform a ```newaliases``` again and then service sendmail restart
 
 
 At this point you can send an email in the following way:
