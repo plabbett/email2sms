@@ -1,0 +1,12 @@
+{
+	"require": {
+		"flourish/flourish": "0.9.*@dev",
+		"messaged/php-mime-mail-parser": "dev-master",
+		"twilio/sdk":"dev-master"
+	},
+	"autoload":{
+		"psr-4":{
+			"SMTP2SMS\\":"src/"
+		}
+	}
+}

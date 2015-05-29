@@ -1,0 +1,166 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "00ef4fa335669ccad437325af42cb0a7",
+    "packages": [
+        {
+            "name": "flourish/flourish",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flourishlib/flourish-classes.git",
+                "reference": "60f80f1fbf10dea5cb05f98e9af3f0f96d9d9101"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flourishlib/flourish-classes/zipball/60f80f1fbf10dea5cb05f98e9af3f0f96d9d9101",
+                "reference": "60f80f1fbf10dea5cb05f98e9af3f0f96d9d9101",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "."
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Bond",
+                    "email": "will@wbond.net",
+                    "homepage": "http://wbond.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A collection of classes for general web development, with a particular focus on compatibility, portability and security",
+            "homepage": "http://flourishlib.com/",
+            "time": "2014-02-26 18:40:29"
+        },
+        {
+            "name": "messaged/php-mime-mail-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/message/php-mime-mail-parser.git",
+                "reference": "e129df8e95d83f8bff52936a37ae227d820c4e92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/message/php-mime-mail-parser/zipball/e129df8e95d83f8bff52936a37ae227d820c4e92",
+                "reference": "e129df8e95d83f8bff52936a37ae227d820c4e92",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mailparse": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MimeMailParser": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC BY-SA 3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Polovka",
+                    "email": "messaged@messaged.lv",
+                    "homepage": "http://messaged.lv"
+                },
+                {
+                    "name": "Gabe",
+                    "email": "gabe@fijiwebdesign.com",
+                    "homepage": "http://www.fijiwebdesign.com/"
+                }
+            ],
+            "description": "Mailparse extension wrapper for PHP 5.3+",
+            "homepage": "http://github.com/message/php-mime-mail-parser",
+            "keywords": [
+                "MimeMailParser",
+                "mail",
+                "mailparse",
+                "mime"
+            ],
+            "time": "2015-01-04 16:11:33"
+        },
+        {
+            "name": "twilio/sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "9d8bb7dad58dc52fc4cbc1f0e905950ad839ca73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/9d8bb7dad58dc52fc4cbc1f0e905950ad839ca73",
+                "reference": "9d8bb7dad58dc52fc4cbc1f0e905950ad839ca73",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "mockery/mockery": ">=0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Services_Twilio": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Burke",
+                    "email": "kevin@twilio.com"
+                },
+                {
+                    "name": "Kyle Conroy",
+                    "email": "kyle+pear@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "http://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "time": "2014-12-04 19:17:59"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "flourish/flourish": 20,
+        "messaged/php-mime-mail-parser": 20,
+        "twilio/sdk": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}
