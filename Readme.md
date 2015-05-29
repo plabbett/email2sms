@@ -1,4 +1,4 @@
-== Overview ==
+# Overview
 
 The setup listed below assumes you are on CentOS and clone this repo into /opt/email2sms
 
@@ -6,6 +6,8 @@ Change your paths to match if you don't use the same setup.
 
 Additionally, the reply.php will need to be in a web-enabled location that Twilio can hit.
 However, you should not expose the entire repo to the world.
+
+Configure your Twilio number's messaging url to the public url of your reply.php
 
 
 ```git clone https://github.com/plabbett/email2sms```
@@ -16,9 +18,9 @@ Rename config.example.php to config.php
 Modify as you see fit.
 
 
-== Configure Sendmail Alias and Domain Catch All ==
+# Configure Sendmail Alias and Domain Catch All ==
 
-=== Create alias to our script ===
+## Create alias to our script
 In sendmail, add an alias to pipe email to the PHP script.
 
 nano /etc/aliases
@@ -27,7 +29,7 @@ Add: youralias: “|/usr/bin/php –q /opt/email2sms/parse.php”
 
 Save the file
 
-=== Point catch-all to alias ===
+## Point catch-all to alias
 nano /etc/mail/virtusertable
 	
 Add: @yourdomain.com youralias
