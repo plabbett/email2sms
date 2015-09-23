@@ -1,0 +1,23 @@
+
+1) Create /etc/postfix/virtual_aliases to add a catch-all alias -- localuser needs to be an existing local user:
+
+@mydomain.tld   localuser@mydomain.tld
+(2) Create /etc/postfix/transport to add a transport mapping. "mytransportname" can be whatever you want; it's used below in master.cf:
+
+mydomain.tld    mytransportname:
+(3) Next, both transport and virtual_aliases need to be compiled into berkeley db files:
+
+$ sudo postmap /etc/postfix/virtual_aliases
+$ sudo postmap /etc/postfix/transport
+(4) Add the transport to /etc/postfix/master.cf:
+
+mytransportname   unix  -       n       n       -       -       pipe
+  flags=FR user=localuser argv=/path/to/my/script.py
+  ${nexthop} ${user}
+(5) In /etc/postfix/main.cf:
+
+  ...
+  transport_maps = hash:/etc/postfix/transport
+  virtual_alias_maps = hash:/etc/postfix/virtual_aliases
+
+
